@@ -1,13 +1,13 @@
-# 🧚 About Me:
-✦ A 2nd year BTech student passionate about building creative and impactful tech projects[1].<br>
-✦ Exploring UI/UX-focused web development, with projects like a photobooth app[2][1].<br>
-✦ Interested in tackling real-world problems with unique, user-centered solutions[3][4].<br>
+# 🧚🏻‍♀️ About Me:
+✦ A 2nd year BTech student passionate about building creative and impactful tech projects.<br>
+✦ Exploring UI/UX-focused web development, with projects like a photobooth app.<br>
+✦ Interested in tackling real-world problems with unique, user-centered solutions.<br>
 ✦ Quick learner who enjoys experimenting with new tools and technologies.<br>
 ✦ Always looking to collaborate and contribute to open-source projects.<br>
 <br>
 
 
-## 🌐 Socials:
+## 🎀 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sreeja-das) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:sreejadas0405@gmail.com) 
 
 # 💻 Tech Stack:
