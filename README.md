@@ -1,9 +1,9 @@
-# 💫 About Me:
-- A 2nd year BTech student passionate about building creative and impactful tech projects[1].<br>
-- Exploring UI/UX-focused web development, with projects like a photobooth app[2][1].<br>
-- Interested in tackling real-world problems with unique, user-centered solutions[3][4].<br>
-- Quick learner who enjoys experimenting with new tools and technologies.<br>
-- Always looking to collaborate and contribute to open-source projects.<br>
+# 🧚 About Me:
+✦ A 2nd year BTech student passionate about building creative and impactful tech projects[1].<br>
+✦ Exploring UI/UX-focused web development, with projects like a photobooth app[2][1].<br>
+✦ Interested in tackling real-world problems with unique, user-centered solutions[3][4].<br>
+✦ Quick learner who enjoys experimenting with new tools and technologies.<br>
+✦ Always looking to collaborate and contribute to open-source projects.<br>
 <br>
 
 
