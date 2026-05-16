@@ -1,5 +1,5 @@
 <h1 align="center">
-  Hi there, Sreeja here! <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2728/512.gif" width="35px">
+  Hi there, Sreeja here! <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVid3U4M3lrOWwzbzE5andob21lbm5sOXExOXA1cTh4emcybjlqMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/kZqbBT64ECtjy/giphy.gif" width="35px">
 </h1>
 
 <p align="center">
@@ -20,10 +20,9 @@
 <br/>
 
 <p align="center">
-  <!-- Once you deploy tthn0/Spotify-Readme to Vercel, replace YOUR_VERCEL_URL below with your link! -->
-  <!-- <a href="https://open.spotify.com/user/your_id"> -->
-  <!--   <img src="https://YOUR_VERCEL_URL/api" alt="Spotify Now Playing" /> -->
-  <!-- </a> -->
+  <a href="https://sparrowdex.pythonanywhere.com/link">
+    <img src="https://sparrowdex.pythonanywhere.com?spin=true&theme=dark" alt="Currently Playing" />
+  </a>
 </p>
 
 <br/>
@@ -124,7 +123,7 @@
 <br/><br/>
 
 <a href="https://github.com/ashutosh00710/github-readme-activity-graph">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sparrowdex&theme=radical&hide_border=true&area=true" alt="sparrowdex's Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sparrowdex&theme=radical&hide_border=true&area=true&bg_color=transparent" alt="sparrowdex's Activity Graph" />
 </a>
 
 </div>
