@@ -20,9 +20,10 @@
 <br/>
 
 <p align="center">
-  <a href="https://open.spotify.com/user/YOUR_SPOTIFY_UID">
-    <img src="https://spotify-github-profile.vercel.app/api/view?uid=YOUR_SPOTIFY_UID&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=true&bar_color=53b14f&bar_color_cover=false" alt="Spotify Music Player" />
-  </a>
+  <!-- Once you deploy tthn0/Spotify-Readme to Vercel, replace YOUR_VERCEL_URL below with your link! -->
+  <!-- <a href="https://open.spotify.com/user/your_id"> -->
+  <!--   <img src="https://YOUR_VERCEL_URL/api" alt="Spotify Now Playing" /> -->
+  <!-- </a> -->
 </p>
 
 <br/>
