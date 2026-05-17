@@ -123,7 +123,7 @@
 ## <img src="https://api.iconify.design/solar:letter-bold-duotone.svg?color=%23FF4500" width="28"> Reach Out!
 
 <div align="left">
-  <img src="./images/Hello.gif" align="left" width="250" alt="Hello, wanna code?" />
+  <img src="./images/hello.gif" align="left" width="250" alt="Hello, wanna code?" />
   <br/>
   <p><strong>I am always open to discussing new projects, creative ideas, or exciting opportunities!</strong></p>
   <p>Whether you have a question, want to collaborate on some code, or just want to say hi, my inbox is always open.</p>
