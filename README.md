@@ -78,7 +78,7 @@
     <td width="50%" valign="top">
       <h3 align="center">🛒 Full-Stack E-Commerce</h3>
       <br />
-      <a target="_blank" href="https://github.com/sparrowdex/Diecast-Store">
+      <a target="_blank" href="https://www.thediecaststore.in">
         <img width="1881" height="740" alt="Project 1" src="https://github.com/user-attachments/assets/f15b1668-b224-42ea-b694-81e530759b97" />
       </a>
       <br />
