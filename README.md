@@ -1,5 +1,5 @@
 <h1 align="center">
-  Hi there, Sreeja here! <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVid3U4M3lrOWwzbzE5andob21lbm5sOXExOXA1cTh4emcybjlqMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/kZqbBT64ECtjy/giphy.gif" width="35px">
+  Hi there, Sreeja here! <img src="./images/cute sonny angel-modified.png" width="55px">
 </h1>
 
 <p align="center">
@@ -12,16 +12,11 @@
   <em>A 3rd-year B.Tech student passionate about crafting beautiful, user-centered interfaces and building robust full-stack applications. I love experimenting with new tools, creative coding, and solving real-world problems.</em>
 </p>
 
-<p align="center">
-  <a href="https://linkedin.com/in/sreeja-das"><img src="https://img.shields.io/badge/LinkedIn-FF69B4?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:sreejadas0405@gmail.com"><img src="https://img.shields.io/badge/Email-FF1493?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
-</p>
-
 <br/>
 
 <p align="center">
   <a href="https://sparrowdex.pythonanywhere.com/link">
-    <img src="https://sparrowdex.pythonanywhere.com?spin=true&theme=dark" alt="Currently Playing" />
+    <img src="https://sparrowdex.pythonanywhere.com?spin=true&theme=dark&eq_color=FF9800" alt="Currently Playing" />
   </a>
 </p>
 
@@ -109,10 +104,8 @@
 <div align="center">
 
 <a href="https://github.com/ryo-ma/github-profile-trophy">
-  <img src="https://github-profile-trophy.vercel.app/?username=sparrowdex&theme=radical&no-bg=true&no-frame=true&row=1&column=6" alt="sparrowdex's Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=sparrowdex&theme=dracula&no-bg=true&no-frame=true&row=1&column=6" alt="sparrowdex's Trophies" />
 </a>
-
-<br/><br/>
 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/github-contribution-grid-snake-dark.svg">
@@ -120,10 +113,26 @@
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/github-contribution-grid-snake.svg">
   </picture>
 
-<br/><br/>
 
-<a href="https://github.com/ashutosh00710/github-readme-activity-graph">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sparrowdex&theme=radical&hide_border=true&area=true&bg_color=transparent" alt="sparrowdex's Activity Graph" />
-</a>
+
 
 </div>
+
+<br/><br/>
+
+## <img src="https://api.iconify.design/solar:letter-bold-duotone.svg?color=%23FF4500" width="28"> Reach Out!
+
+<div align="left">
+  <img src="./images/Hello.gif" align="left" width="250" alt="Hello, wanna code?" />
+  <br/>
+  <p><strong>I am always open to discussing new projects, creative ideas, or exciting opportunities!</strong></p>
+  <p>Whether you have a question, want to collaborate on some code, or just want to say hi, my inbox is always open.</p>
+  <br/>
+  <a href="https://linkedin.com/in/sreeja-das"><img src="https://img.shields.io/badge/LinkedIn-FF69B4?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:sreejadas0405@gmail.com"><img src="https://img.shields.io/badge/Email-FF1493?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://instagram.com/_e.s.a.r_"><img src="https://img.shields.io/badge/Instagram-FF1495?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <p align="right">
+  <img src="./images/snoopy-modified.png" alt="Snoopy" width="90" />
+</p>
+</div>
+<br clear="both"/>
