@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="98" viewBox="0 0 104 98" fill="none">
+  <defs>
+    <linearGradient id="purple_rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E8FF"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+    <linearGradient id="purple_face" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9D5FF"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(4, 2)">
+    <!-- 3D Thickness Bottom Shadow -->
+    <path d="M 48 18 C 41 8 28 2 15 8 C 3 13 -2 27 3 42 C 10 58 48 78 48 78 C 48 78 86 58 93 42 C 98 27 93 13 81 8 C 68 2 55 8 48 18 Z" fill="#7E22CE"/>
+    <!-- Outer Candy Body Rim -->
+    <path d="M 48 14 C 41 4 28 -2 15 4 C 3 9 -2 23 3 38 C 10 54 48 74 48 74 C 48 74 86 54 93 38 C 98 23 93 9 81 4 C 68 -2 55 4 48 14 Z" fill="url(#purple_rim)"/>
+    <!-- Inset Face Groove -->
+    <path d="M 48 20 C 42 11 31 6 19 11 C 9 15 5 27 9 38 C 15 51 48 68 48 68 C 48 68 81 51 87 38 C 91 27 87 15 77 11 C 65 6 54 11 48 20 Z" fill="#9333EA"/>
+    <path d="M 48 22 C 42 13 31 8 19 13 C 10 17 6 28 10 38 C 16 50 48 66 48 66 C 48 66 80 50 86 38 C 90 28 86 17 77 13 C 65 8 54 13 48 22 Z" fill="url(#purple_face)"/>
+    <!-- Single Centered Stamped Text -->
+    <text x="48" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif" font-size="11" font-weight="900" fill="#581C87" text-anchor="middle" dominant-baseline="central" letter-spacing="0.5">PRISMA</text>
+  </g>
+
+  <!-- ANIMATED SPARKLE VECTOR ACCENTS -->
+  <g transform="translate(12, 10)">
+    <path d="M 0 -8 Q 0 0 -8 0 Q 0 0 0 8 Q 0 0 8 0 Q 0 0 0 -8 Z" fill="#FFFFFF">
+      <animate attributeName="opacity" values="0.3; 1; 0.3" dur="1.6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" values="0.6; 1.35; 0.6" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g transform="translate(84, 58)">
+    <path d="M 0 -6 Q 0 0 -6 0 Q 0 0 0 6 Q 0 0 0 6 Q 0 0 0 -6 Z" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1; 0.2; 1" dur="1.4s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" values="1.3; 0.6; 1.3" dur="1.4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <circle cx="7" cy="22" r="1.5" fill="#FFFFFF">
+    <animate attributeName="opacity" values="0.2; 1; 0.2" dur="1.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="92" cy="48" r="1.5" fill="#FFFFFF">
+    <animate attributeName="opacity" values="0.9; 0.3; 0.9" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
