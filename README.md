@@ -1,19 +1,17 @@
 <h1 align="center">
-  Hi there, Sreeja here! <img src="./images/cute sonny angel-modified.png" width="45px" valign="middle">
+  <img src="./images/header_title.svg" alt="Hi there, Sreeja here!" width="520" />
 </h1>
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=FF4500&center=true&vCenter=true&width=500&lines=Full-Stack+Developer;UI%2FUX+Enthusiast;Creative+Coder" alt="Typing SVG" />
-  </a>
+  <img src="./images/typing_anim.svg" alt="Full-Stack Developer | UI/UX Enthusiast | Creative Coder" width="500" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sparrowdex&color=FF4500&style=flat-square&label=Profile+Views" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=sparrowdex&color=FF4581&style=plastic&label=Profile%20Views" alt="Profile Views" />
 </p>
 
 <p align="center">
-  <em>A 3rd-year B.Tech student passionate about crafting beautiful, user-centered interfaces and building robust full-stack applications. I love experimenting with new tools, creative coding, and solving real-world problems.</em>
+  <em>A 4th-year B.Tech student passionate about crafting beautiful, user-centered interfaces and building robust full-stack applications. I love experimenting with new tools, creative coding, and solving real-world problems.</em>
 </p>
 
 <br/>
@@ -29,15 +27,25 @@
 ## <img src="https://api.iconify.design/solar:code-square-bold-duotone.svg?color=%231E88E5" width="28" valign="middle"> My Tech Stack
 
 <div align="center">
-  <img src="./images/tag_nextjs.svg" alt="Next.js" height="68" />
+  <a href="https://nextjs.org" target="_blank" rel="noreferrer">
+    <img src="./images/tag_nextjs.svg" alt="Next.js" height="68" />
+  </a>
   &nbsp;
-  <img src="./images/tag_tailwindcss.svg" alt="Tailwind CSS" height="68" />
+  <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">
+    <img src="./images/tag_tailwindcss.svg" alt="Tailwind CSS" height="68" />
+  </a>
   &nbsp;
-  <img src="./images/tag_nodejs.svg" alt="Node.js" height="68" />
+  <a href="https://nodejs.org" target="_blank" rel="noreferrer">
+    <img src="./images/tag_nodejs.svg" alt="Node.js" height="68" />
+  </a>
   &nbsp;
-  <img src="./images/tag_prisma.svg" alt="Prisma ORM" height="68" />
+  <a href="https://www.prisma.io" target="_blank" rel="noreferrer">
+    <img src="./images/tag_prisma.svg" alt="Prisma ORM" height="68" />
+  </a>
   &nbsp;
-  <img src="./images/tag_neondb.svg" alt="Neon Database" height="68" />
+  <a href="https://neon.tech" target="_blank" rel="noreferrer">
+    <img src="./images/tag_neondb.svg" alt="Neon Database" height="68" />
+  </a>
 </div>
 
 <br/>
@@ -91,20 +99,20 @@
 ## <img src="https://api.iconify.design/solar:rocket-bold-duotone.svg?color=%23D84315" width="28" valign="middle"> Featured Projects
 
 ### 🏎️ The Diecast Store
-**[thediecaststore.in](https://www.thediecaststore.in)** &nbsp;|&nbsp; `React` • `Node.js` • `Express` • `Database` • `Payment Gateway`
+<a href="https://www.thediecaststore.in" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">thediecaststore.in</a> &nbsp;|&nbsp; `React` • `Node.js` • `Express` • `Database` • `Payment Gateway`
 
 > *A complete full-stack storefront featuring secure payment integration, dynamic cart state management, product filtering, and an intuitive administrative operations dashboard.*
 
-[🔗 Live Website](https://www.thediecaststore.in)
+<a href="https://www.thediecaststore.in" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">🔗 Live Website</a>
 
 ---
 
 ### 🎄 Christmas Spirit 3D App
-**[ghostsofchristmas.vercel.app](https://ghostsofchristmas.vercel.app)** &nbsp;|&nbsp; `3D Canvas` • `p5.js / WebGL` • `Sound Design` • `React`
+<a href="https://ghostsofchristmas.vercel.app" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">ghostsofchristmas.vercel.app</a> &nbsp;|&nbsp; `3D Canvas` • `p5.js / WebGL` • `Sound Design` • `React`
 
 > *An interactive 3D snow globe depicting Christmas Past, Present & Future through intuitive sound design, particle physics, and real-time user interaction.*
 
-[🔗 Live Website](https://ghostsofchristmas.vercel.app) &nbsp;|&nbsp; [💻 View Repository](https://github.com/sparrowdex/Merry-Christmas)
+<a href="https://ghostsofchristmas.vercel.app" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">🔗 Live Website</a> &nbsp;|&nbsp; <a href="https://github.com/sparrowdex/Merry-Christmas" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">💻 View Repository</a>
 
 <br/>
 
@@ -117,12 +125,6 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/github-contribution-grid-snake.svg">
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/github-contribution-grid-snake.svg">
   </picture>
-
-  <br/><br/>
-
-  <a href="https://github.com/sparrowdex">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=sparrowdex&theme=dark&background=00000000&fire=FF4500&ring=FF4500&currStreakNum=ffffff&currStreakLabel=FF4500&sideNums=ffffff&sideLabels=FF4500&border=FF4500" alt="GitHub Streak Stats" />
-  </a>
 
 </div>
 

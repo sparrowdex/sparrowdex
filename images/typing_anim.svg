@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 40" width="500" height="40" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&amp;display=swap');
+
+      .typing-text {
+        font-family: 'Fira Code', monospace, sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+
+      /* Line 1: Full-Stack Developer (Hot Candy Pink) */
+      .line-1 {
+        fill: #FF69B4;
+        opacity: 0;
+        animation: cycleLine1 9s infinite;
+      }
+
+      /* Line 2: UI/UX Enthusiast (Sky Blue) */
+      .line-2 {
+        fill: #38BDF8;
+        opacity: 0;
+        animation: cycleLine2 9s infinite;
+      }
+
+      /* Line 3: Creative Coder (Lavender Purple) */
+      .line-3 {
+        fill: #C084FC;
+        opacity: 0;
+        animation: cycleLine3 9s infinite;
+      }
+
+      @keyframes cycleLine1 {
+        0%, 30% { opacity: 1; }
+        33%, 100% { opacity: 0; }
+      }
+
+      @keyframes cycleLine2 {
+        0%, 30% { opacity: 0; }
+        33%, 63% { opacity: 1; }
+        66%, 100% { opacity: 0; }
+      }
+
+      @keyframes cycleLine3 {
+        0%, 63% { opacity: 0; }
+        66%, 96% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(250, 20)">
+    <!-- Line 1: Hot Candy Pink -->
+    <text class="typing-text line-1">Full-Stack Developer</text>
+    <!-- Line 2: Sky Blue -->
+    <text class="typing-text line-2">UI/UX Enthusiast</text>
+    <!-- Line 3: Creative Coder -->
+    <text class="typing-text line-3">Creative Coder</text>
+  </g>
+</svg>
