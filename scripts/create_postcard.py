@@ -1,8 +1,7 @@
-"""Generate the 'say hi' postcard and its paper-tag link buttons.
+"""Generate the 'say hi' postcard (the link pills come from create_candies.py).
 
 Run from the repo root:  python scripts/create_postcard.py
-Outputs images/postcard.svg and images/links/{linkedin,email,instagram}.svg
-(paper-coloured, so one file each suits both light and dark mode)
+Output: images/postcard.svg (paper-coloured, so one file suits both light and dark mode)
 """
 import html
 import os
@@ -98,38 +97,6 @@ postcard = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" 
 </svg>
 '''
 
-# ---------------- paper-tag link buttons ----------------
-ICONS = {
-    "linkedin": ('<rect x="0" y="0" width="22" height="22" rx="5" fill="#0A66C2"/>'
-                 '<rect x="4.5" y="9" width="3" height="8.5" fill="#fff"/><circle cx="6" cy="5.8" r="1.9" fill="#fff"/>'
-                 '<path d="M10 9h2.9v1.3c.5-.9 1.6-1.5 2.9-1.5 2.2 0 2.9 1.4 2.9 3.6v5.1h-3v-4.5c0-1-.3-1.7-1.2-1.7s-1.5.7-1.5 1.7v4.5H10z" fill="#fff"/>'),
-    "email": ('<rect x="0" y="3" width="22" height="16" rx="3" fill="#F4B942"/>'
-              '<path d="M1.5 5l9.5 7.5L20.5 5" stroke="#fff" stroke-width="2.2" stroke-linejoin="round" fill="none"/>'),
-    "instagram": ('<rect x="0" y="0" width="22" height="22" rx="6.5" fill="#E1306C"/>'
-                  '<circle cx="11" cy="11" r="4.6" stroke="#fff" stroke-width="2.2" fill="none"/>'
-                  '<circle cx="16.6" cy="5.4" r="1.4" fill="#fff"/>'),
-}
-LABELS = {"linkedin": "linkedin", "email": "email", "instagram": "instagram"}
-
-buttons = {}
-for key, icon in ICONS.items():
-    BW, BH = 200, 64
-    label = words(mono, LABELS[key], 16, 78, 38, INK)
-    buttons[key] = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{BW}" height="{BH}" viewBox="0 0 {BW} {BH}" fill="none">
-  <title>{LABELS[key]}</title>
-  <defs>{paper_defs("b", dy=3, blur=3)}</defs>
-  <rect x="8" y="8" width="{BW - 16}" height="{BH - 22}" rx="8" fill="url(#paperb)" filter="url(#shadowb)"/>
-  <circle cx="24" cy="{8 + (BH - 22) / 2}" r="4.5" fill="#E2D6CC"/>
-  <g transform="translate(40 {8 + (BH - 22) / 2 - 11})">{icon}</g>
-  {label}
-</svg>
-'''
-
-os.makedirs("images/links", exist_ok=True)
 with open("images/postcard.svg", "w", encoding="utf-8") as f:
     f.write(postcard)
 print("wrote images/postcard.svg")
-for key, svg in buttons.items():
-    with open(f"images/links/{key}.svg", "w", encoding="utf-8") as f:
-        f.write(svg)
-    print(f"wrote images/links/{key}.svg")
