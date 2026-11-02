@@ -1,2 +1,5 @@
 # Ignore personal documentation and setup notes
 guidelines.md
+# Fonts are downloaded on demand by scripts/svgtext.py
+scripts/fonts/
+__pycache__/

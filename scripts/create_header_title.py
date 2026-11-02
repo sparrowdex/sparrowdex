@@ -1,67 +1,75 @@
+"""Generate the animated cursive header in dark- and light-mode variants.
+
+Run from the repo root:  python scripts/create_header_title.py
+Outputs: images/header_title.svg (dark mode) and images/header_title_light.svg
+"""
 import base64
 
-# Base64 encode the Sonny Angel image
-with open('images/cute sonny angel-modified.png', 'rb') as f:
-    b64_img = base64.b64encode(f.read()).decode('utf-8')
+from svgtext import glyph_paths, load_font
 
-text = "Hi there, Sreeja here!"
+TEXT = "Hi there, Sreeja here!"
+SIZE = 44
+WIDTH, HEIGHT = 520, 70
+BASELINE = 46
+ANGEL_SIZE = 44
+GAP = 10
 
-# Generate letter-by-letter keyframes and tspans
-tspans_html = ""
-css_rules = ""
+VARIANTS = {
+    "images/header_title.svg": "#FFFFFF",        # dark mode
+    "images/header_title_light.svg": "#3B1F2B",  # light mode (deep plum)
+}
 
-for i, char in enumerate(text):
+def embed_png(path, px):
+    """Base64 a PNG, downscaled to `px` (3x display size) when Pillow is available."""
+    try:
+        import io
+        from PIL import Image
+        im = Image.open(path).convert("RGBA")
+        im.thumbnail((px, px), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, "PNG", optimize=True)
+        data = buf.getvalue()
+    except ImportError:
+        with open(path, "rb") as f:
+            data = f.read()
+    return base64.b64encode(data).decode()
+
+
+angel_b64 = embed_png("images/cute sonny angel-modified.png", ANGEL_SIZE * 3)
+
+font = load_font("GreatVibes.ttf")
+glyphs, text_w = glyph_paths(font, TEXT, SIZE)
+x0 = (WIDTH - text_w) / 2  # text centered on the canvas; angel sits just after it
+
+css, paths = [], []
+for i, (ch, d, _) in enumerate(glyphs):
+    if not d:
+        continue  # spaces
     delay = round(0.05 * i, 2)
-    css_rules += f"      .c-{i} {{ animation: appear 0.15s {delay}s forwards; opacity: 0; }}\n"
-    if char == " ":
-        tspans_html += f'<tspan class="c-{i}">&#160;</tspan>'
-    else:
-        tspans_html += f'<tspan class="c-{i}">{char}</tspan>'
+    css.append(f"      .c-{i} {{ animation: appear .3s {delay}s ease-out forwards; }}")
+    paths.append(f'    <path class="g c-{i}" d="{d}"/>')
 
-# Canvas width = 520px, Center = 260px
-# Text width ~290px -> Text starts at x = 115px (Text center is at EXACT 260px center of canvas!)
-# Sonny Angel image is placed right after text at x = 415px
-svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" width="520" height="65" viewBox="0 0 520 65" fill="none">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Dancing+Script:wght@700&amp;family=Pacifico&amp;display=swap');
+angel_delay = round(0.05 * len(TEXT) + 0.1, 2)
 
-      .cursive-title {{
-        font-family: 'Great Vibes', 'Dancing Script', 'Pacifico', 'Brush Script MT', 'GreatVibes-Regular', cursive, sans-serif;
-        font-size: 40px;
-        font-weight: 500;
-        fill: #FFFFFF;
-      }}
-
-      @keyframes appear {{
-        0% {{ opacity: 0; transform: translateY(4px); }}
-        100% {{ opacity: 1; transform: translateY(0); }}
-      }}
-
-{css_rules}
-      /* Sonny Angel image fade in after text finishes */
-      .angel-img {{
-        animation: appear 0.35s 1.1s forwards;
-        opacity: 0;
-      }}
-    </style>
-  </defs>
-
-  <g transform="translate(0, 32.5)">
-    <!-- CURSIVE TITLE TEXT (WHITE COLOR) - CENTERED EXACTLY AT X=260 -->
-    <text x="115" y="0" class="cursive-title" dominant-baseline="central">
-      {tspans_html}
-    </text>
-    
-    <!-- SONNY ANGEL IMAGE SHIFTED RIGHT AFTER THE CENTERED TEXT -->
-    <g class="angel-img">
-      <image href="data:image/png;base64,{b64_img}" x="412" y="-22" width="44" height="44"/>
-    </g>
+for out, fill in VARIANTS.items():
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" fill="none">
+  <title>{TEXT}</title>
+  <style>
+      .g {{ fill: {fill}; opacity: 0; transform: translateY(4px); }}
+      @keyframes appear {{ to {{ opacity: 1; transform: translateY(0); }} }}
+{chr(10).join(css)}
+      .angel {{ opacity: 0; animation: pop .5s {angel_delay}s cubic-bezier(.3,1.6,.5,1) forwards;
+               transform-origin: center; transform-box: fill-box; }}
+      @keyframes pop {{ from {{ opacity: 0; transform: scale(.4) rotate(-20deg); }}
+                        to {{ opacity: 1; transform: scale(1) rotate(0); }} }}
+      @media (prefers-reduced-motion: reduce) {{ .g, .angel {{ animation: none; opacity: 1; transform: none; }} }}
+  </style>
+  <g transform="translate({x0:.1f}, {BASELINE})">
+{chr(10).join(paths)}
   </g>
+  <image class="angel" href="data:image/png;base64,{angel_b64}" x="{x0 + text_w + GAP:.1f}" y="{BASELINE - ANGEL_SIZE + 6}" width="{ANGEL_SIZE}" height="{ANGEL_SIZE}"/>
 </svg>
 '''
-
-with open('images/header_title.svg', 'w', encoding='utf-8') as f:
-    f.write(svg_content)
-
-print("Updated header_title.svg with WHITE text centered at x=260 and image shifted right!")
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(svg)
+    print(f"wrote {out}")

@@ -1,9 +1,15 @@
 <h1 align="center">
-  <img src="./images/header_title.svg" alt="Hi there, Sreeja here!" width="520" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./images/header_title.svg">
+    <img src="./images/header_title_light.svg" alt="Hi there, Sreeja here!" width="520" />
+  </picture>
 </h1>
 
 <p align="center">
-  <img src="./images/typing_anim.svg" alt="Full-Stack Developer | UI/UX Enthusiast | Creative Coder" width="500" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./images/typing_anim.svg">
+    <img src="./images/typing_anim_light.svg" alt="Full-Stack Developer | UI/UX Enthusiast | Creative Coder" width="500" />
+  </picture>
 </p>
 
 <p align="center">
@@ -24,7 +30,7 @@
 
 <br/>
 
-## <img src="https://api.iconify.design/solar:code-square-bold-duotone.svg?color=%231E88E5" width="28" valign="middle"> My Tech Stack
+## <img src="https://api.iconify.design/solar/code-square-bold-duotone.svg?color=%231E88E5" width="28" valign="middle"> My Tech Stack
 
 <div align="center">
   <a href="https://nextjs.org" target="_blank" rel="noreferrer">
@@ -96,29 +102,38 @@
 
 <br/>
 
-## <img src="https://api.iconify.design/solar:rocket-bold-duotone.svg?color=%23D84315" width="28" valign="middle"> Featured Projects
+## <img src="https://api.iconify.design/solar/rocket-bold-duotone.svg?color=%23D84315" width="28" valign="middle"> Featured Projects
 
-### 🏎️ The Diecast Store
-<a href="https://www.thediecaststore.in" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">thediecaststore.in</a> &nbsp;|&nbsp; `React` • `Node.js` • `Express` • `Database` • `Payment Gateway`
-
-> *A complete full-stack storefront featuring secure payment integration, dynamic cart state management, product filtering, and an intuitive administrative operations dashboard.*
-
-<a href="https://www.thediecaststore.in" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">🔗 Live Website</a>
-
----
-
-### 🎄 Christmas Spirit 3D App
-<a href="https://ghostsofchristmas.vercel.app" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">ghostsofchristmas.vercel.app</a> &nbsp;|&nbsp; `3D Canvas` • `p5.js / WebGL` • `Sound Design` • `React`
-
-> *An interactive 3D snow globe depicting Christmas Past, Present & Future through intuitive sound design, particle physics, and real-time user interaction.*
-
-<a href="https://ghostsofchristmas.vercel.app" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">🔗 Live Website</a> &nbsp;|&nbsp; <a href="https://github.com/sparrowdex/Merry-Christmas" target="_blank" rel="noreferrer" style="color: #FF69B4; font-weight: bold;">💻 View Repository</a>
+<table align="center">
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <a href="https://www.thediecaststore.in"><img src="./images/projects/polaroid_diecast.svg" alt="The Diecast Store" width="360" /></a>
+      <br/>
+      <em>A full-stack storefront with secure payments, live cart state, product filtering and an admin operations dashboard.</em>
+      <br/><br/>
+      <a href="https://www.thediecaststore.in"><b>🔗 Visit store</b></a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <a href="https://ghostsofchristmas.vercel.app"><img src="./images/projects/polaroid_snowglobe.svg" alt="Timeless Snow Globe" width="360" /></a>
+      <br/>
+      <em>An interactive 3D snow globe through Christmas Past, Present &amp; Future. Blow on your mic to make the snow dance.</em>
+      <br/><br/>
+      <a href="https://ghostsofchristmas.vercel.app"><b>🔗 Shake it</b></a> &nbsp;·&nbsp; <a href="https://github.com/sparrowdex/Merry-Christmas"><b>💻 Code</b></a>
+    </td>
+  </tr>
+</table>
 
 <br/>
 
-## <img src="https://api.iconify.design/solar:chart-square-bold-duotone.svg?color=%2343A047" width="28" valign="middle"> Contribution Activity
+## <img src="https://api.iconify.design/solar/chart-square-bold-duotone.svg?color=%2343A047" width="28" valign="middle"> Contribution Activity
 
 <div align="center">
+
+  <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_contribs.svg" alt="Total contributions" width="190" />
+  <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_streak.svg" alt="Current streak (days)" width="190" />
+  <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_record.svg" alt="Longest streak (days)" width="190" />
+
+  <br/><br/>
 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/github-contribution-grid-snake-dark.svg">
@@ -130,7 +145,7 @@
 
 <br/>
 
-## <img src="https://api.iconify.design/solar:letter-bold-duotone.svg?color=%23FF4500" width="28" valign="middle"> Reach Out!
+## <img src="https://api.iconify.design/solar/letter-bold-duotone.svg?color=%23FF4500" width="28" valign="middle"> Reach Out!
 
 <div align="left">
   <img src="./images/hello.gif" align="left" width="240" alt="Hello, wanna code?" />
