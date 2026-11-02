@@ -74,11 +74,12 @@ def _bird():
     return px, eye_open, eye_closed
 
 
-def _scene():
+def _scene(width=N):
+    """Banded sky + branch for a `width` x 32 grid."""
     sky = {}
     bands = [(0, 9, "sky0"), (9, 17, "sky1"), (17, 24, "sky2"), (24, 29, "sky3")]
     for y in range(N):
-        for x in range(N):
+        for x in range(width):
             for a, b, col in bands:
                 if a <= y < b:
                     sky[(x, y)] = col
@@ -88,13 +89,14 @@ def _scene():
                 if (y == a and x % 2 == 0) or (y == a + 1 and x % 4 == 1):
                     sky[(x, y)] = above
     ground = {}
-    for x in range(N):
+    for x in range(width):
         ground[(x, 29)] = "branch_l"
         ground[(x, 30)] = "branch"
         ground[(x, 31)] = "branch" if x % 5 else "branch_l"
-    for p, col in [((3, 28), "leaf"), ((4, 28), "leaf"), ((4, 27), "leaf_d"), ((5, 27), "leaf"),
-                   ((27, 28), "leaf"), ((28, 28), "leaf_d"), ((28, 27), "leaf"), ((29, 26), "leaf")]:
-        ground[p] = col
+    if width == N:
+        for p, col in [((3, 28), "leaf"), ((4, 28), "leaf"), ((4, 27), "leaf_d"), ((5, 27), "leaf"),
+                       ((27, 28), "leaf"), ((28, 28), "leaf_d"), ((28, 27), "leaf"), ((29, 26), "leaf")]:
+            ground[p] = col
     return sky, ground
 
 
@@ -128,7 +130,6 @@ def _rects(pixels, cell, dx=0, dy=0):
 
 def sparrow_fragment(x, y, cell, uid="sp"):
     sky, ground = _scene()
-    bird, eye_open, eye_closed = _bird()
     span = N * cell
     return f'''<g transform="translate({x} {y})" shape-rendering="crispEdges">
   <clipPath id="{uid}clip"><rect width="{span}" height="{span}"/></clipPath>
@@ -143,24 +144,35 @@ def sparrow_fragment(x, y, cell, uid="sp"):
         values="{";".join(f"{-i * cell} 0" for i in range(0, 26))};{12 * cell} 0" keyTimes="{";".join(f"{i / 27:.4f}" for i in range(27))}"/>
     </g>
     {_rects(ground, cell)}
-    <g>
+    {bird_group(cell)}
+    {heart_group(cell)}
+  </g>
+</g>'''
+
+
+def bird_group(cell, dx=0, dy=0):
+    """The hopping, blinking sparrow (32x32 local grid) offset by (dx, dy) cells."""
+    bird, eye_open, eye_closed = _bird()
+    return f'''<g>
       <animateTransform attributeName="transform" type="translate" dur="5s" repeatCount="indefinite" calcMode="discrete"
         values="0 0;0 {-cell};0 0;0 {-cell};0 0" keyTimes="0;.80;.84;.88;.92"/>
-      {_rects(bird, cell)}
-      <g>{_rects(eye_open, cell)}
+      {_rects(bird, cell, dx, dy)}
+      <g>{_rects(eye_open, cell, dx, dy)}
         <animate attributeName="opacity" dur="3.7s" repeatCount="indefinite" calcMode="discrete" values="1;0;1" keyTimes="0;.93;.97"/>
       </g>
-      <g opacity="0">{_rects(eye_closed, cell)}
+      <g opacity="0">{_rects(eye_closed, cell, dx, dy)}
         <animate attributeName="opacity" dur="3.7s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;.93;.97"/>
       </g>
-    </g>
-    <g opacity="0">{_rects(HEART, cell, 26, 7)}
+    </g>'''
+
+
+def heart_group(cell, dx=0, dy=0):
+    """A pixel heart that floats up from the sparrow's head every few seconds."""
+    return f'''<g opacity="0">{_rects(HEART, cell, 26 + dx, 7 + dy)}
       <animateTransform attributeName="transform" type="translate" dur="6s" repeatCount="indefinite" calcMode="discrete"
         values="0 0;0 {-cell};{cell} {-2 * cell};{cell} {-3 * cell};0 {-4 * cell};0 {-5 * cell};0 0" keyTimes="0;.6;.67;.74;.81;.88;.95"/>
       <animate attributeName="opacity" dur="6s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;.55;.92"/>
-    </g>
-  </g>
-</g>'''
+    </g>'''
 
 
 if __name__ == "__main__":

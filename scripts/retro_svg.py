@@ -1,4 +1,4 @@
-"""Retro game UI pieces: arcade stats HUD, RPG dialogue box and menu buttons.
+"""Retro game UI pieces: pixel text, sprites, game panels and the arcade stats HUD.
 
 All text is Press Start 2P baked into paths (sizes are multiples of 8 so glyph
 pixels land on whole screen pixels); icons are tiny hand-drawn sprites.
@@ -95,12 +95,6 @@ COIN_FRAMES = [
     ["...DD...", "...DD...", "...WD...", "...WD...", "...WD...", "...WD...", "...DD...", "...DD..."],
 ]
 COIN_PAL = {"Y": "#FFD34E", "W": "#FFF6C2", "D": "#B9771A"}
-CURSOR = ["W...", "WW..", "WWW.", "WWWW", "WWW.", "WW..", "W..."]
-ARROW_DOWN = ["WWWWWWW", ".WWWWW.", "..WWW..", "...W..."]
-LINKEDIN = ["BBBBBBBBB", "BWWBBBBBB", "BWWBBBBBB", "BBBBBBBBB", "BWWBWWWBB", "BWWBWWWWB", "BWWBWWBWB", "BWWBWWBWB", "BBBBBBBBB"]
-ENVELOPE = ["KKKKKKKKKKK", "KKWWWWWWWKK", "KWKWWWWWKWK", "KWWKWWWKWWK", "KWWWKKKWWWK", "KWWWWWWWWWK", "KKKKKKKKKKK"]
-CAMERA = [".PPPPPPPP.", "PWWWWWWWPP", "PWWPPPPWWP", "PWPWWWWPWP", "PWPWWWWPWP", "PWPWWWWPWP", "PWWPPPPWWP", "PWWWWWWWWP", ".PPPPPPPP."]
-HEART = [".PP.PP.", "PPPPPPP", "PPPPPPP", ".PPPPP.", "..PPP..", "...P..."]
 
 
 def hud_svg(stats):
@@ -160,42 +154,3 @@ def hud_svg(stats):
     @keyframes on { to { opacity: 1; } }"""
     title = f"Streak {streak} days, best {record} days, {coins} contributions, level {level}"
     return svg(W, H, title, "\n  ".join(parts), css)
-
-
-def dialogue_svg(portrait_svg):
-    """RPG text box with a portrait and type-on text."""
-    W, H = 760, 212
-    lines = ["A wild VISITOR appeared!", "I'm always up for new projects,", "creative ideas or just a hi.", "What will you do?"]
-    parts = [panel(W, H, "dlg")]
-    # portrait frame
-    parts.append(f'<rect x="28" y="36" width="136" height="136" fill="{INK["frame"]}"/>'
-                 f'<rect x="32" y="40" width="128" height="128" fill="{INK["bg"]}"/>')
-    parts.append(portrait_svg(32, 40, 4))
-    t, _ = text("SPARROWDEX", 8, 96, 192, INK["yellow"], anchor="middle")
-    parts.append(t)
-
-    t0 = 0.4
-    y = 68
-    for i, line in enumerate(lines):
-        col = INK["cyan"] if i == len(lines) - 1 else INK["text"]
-        t, _ = text(line, 16, 192, y, col, cls="ch", per_char_delay=0.035, start=t0)
-        parts.append(t)
-        t0 += len(line) * 0.035 + 0.25
-        y += 34
-    parts.append(f'<g class="ch" style="animation-delay:{t0:.2f}s"><g class="blink">'
-                 f'{sprite(ARROW_DOWN, {"W": INK["pink"]}, W - 64, H - 44, 4)}</g></g>')
-    css = """    .ch { opacity: 0; animation: on 0s forwards; }
-    @keyframes on { to { opacity: 1; } }"""
-    return svg(W, H, " ".join(lines), "\n  ".join(parts), css)
-
-
-def button_svg(label, icon, palette, selected=False):
-    W, H = 264, 64
-    parts = [panel(W, H, "btn", scanlines=False)]
-    if selected:
-        parts.append(f'<g class="blink">{sprite(CURSOR, {"W": INK["pink"]}, 20, 18, 4)}</g>')
-    ih = len(icon) * 4
-    parts.append(sprite(icon, palette, 44, (H - ih) / 2, 4))
-    t, _ = text(label, 16, 44 + len(icon[0]) * 4 + 14, 40, INK["text"])
-    parts.append(t)
-    return svg(W, H, label, "\n  ".join(parts))

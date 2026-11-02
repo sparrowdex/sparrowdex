@@ -1,13 +1,16 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./images/hero.svg">
-    <img src="./images/hero_light.svg" width="840" alt="Hi there, Sreeja here! Full-Stack Developer, UI/UX Enthusiast, Creative Coder. Building The Diecast Store, learning welding software, and happy to talk about coding journeys and what inspires you to create." />
-  </picture>
+  <img src="./images/banner.svg" width="840" alt="Sreeja (@sparrowdex): full-stack / ui-ux / creative coder. A pixel sparrow hops on a branch under a pink sky." />
+</p>
+
+<p align="center">
+  <code>building</code>&nbsp; The Diecast Store<br/>
+  <code>learning</code>&nbsp; welding software (for an assignment, don't ask)<br/>
+  <code>let's talk</code>&nbsp; coding journeys &amp; what inspires you to create
 </p>
 
 <p align="center">
   <a href="https://sparrowdex.pythonanywhere.com/link">
-    <img src="https://sparrowdex.pythonanywhere.com?spin=true&theme=dark&eq_color=FF9800" alt="Currently Playing" />
+    <img src="https://sparrowdex.pythonanywhere.com?style=cassette" width="520" alt="Spotify: what I'm listening to" />
   </a>
 </p>
 
@@ -16,7 +19,7 @@
 <h3>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./images/titles/stack.svg">
-    <img src="./images/titles/stack_light.svg" height="60" alt="My tech stack" />
+    <img src="./images/titles/stack_light.svg" height="44" alt="Tech stack" />
   </picture>
 </h3>
 
@@ -93,7 +96,7 @@
 <h3>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./images/titles/projects.svg">
-    <img src="./images/titles/projects_light.svg" height="60" alt="Featured projects" />
+    <img src="./images/titles/projects_light.svg" height="44" alt="Projects" />
   </picture>
 </h3>
 
@@ -121,7 +124,7 @@
 <h3>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./images/titles/streaks.svg">
-    <img src="./images/titles/streaks_light.svg" height="60" alt="Contribution activity" />
+    <img src="./images/titles/streaks_light.svg" height="44" alt="Stats" />
   </picture>
 </h3>
 
@@ -144,16 +147,16 @@
 <h3>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./images/titles/contact.svg">
-    <img src="./images/titles/contact_light.svg" height="60" alt="Reach out" />
+    <img src="./images/titles/contact_light.svg" height="44" alt="Say hi" />
   </picture>
 </h3>
 
 <p align="center">
-  <img src="./images/retro/dialogue.svg" width="760" alt="A wild VISITOR appeared! I'm always up for new projects, creative ideas or just a hi. What will you do?" />
+  <img src="./images/postcard.svg" width="700" alt="Postcard: hi there! always up for new projects, creative ideas, or just a chat about code :) - sreeja" />
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/sreeja-das"><img src="./images/retro/btn_linkedin.svg" width="240" alt="LinkedIn" /></a>
-  <a href="mailto:sreejadas0405@gmail.com"><img src="./images/retro/btn_email.svg" width="240" alt="Email" /></a>
-  <a href="https://instagram.com/_e.s.a.r_"><img src="./images/retro/btn_instagram.svg" width="240" alt="Instagram" /></a>
+  <a href="https://linkedin.com/in/sreeja-das"><img src="./images/links/linkedin.svg" width="200" alt="LinkedIn" /></a>
+  <a href="mailto:sreejadas0405@gmail.com"><img src="./images/links/email.svg" width="200" alt="Email" /></a>
+  <a href="https://instagram.com/_e.s.a.r_"><img src="./images/links/instagram.svg" width="200" alt="Instagram" /></a>
 </p>
