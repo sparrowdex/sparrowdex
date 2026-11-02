@@ -17,6 +17,8 @@ FONT_DIR = os.path.join(os.path.dirname(__file__), "fonts")
 FONT_URLS = {
     "GreatVibes.ttf": "https://github.com/google/fonts/raw/main/ofl/greatvibes/GreatVibes-Regular.ttf",
     "FiraCode.ttf": "https://github.com/google/fonts/raw/main/ofl/firacode/FiraCode%5Bwght%5D.ttf",
+    "Caveat.ttf": "https://github.com/google/fonts/raw/main/ofl/caveat/Caveat%5Bwght%5D.ttf",
+    "Fredoka.ttf": "https://github.com/google/fonts/raw/main/ofl/fredoka/Fredoka%5Bwdth,wght%5D.ttf",
 }
 
 

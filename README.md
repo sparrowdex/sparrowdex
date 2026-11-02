@@ -1,26 +1,9 @@
-<h1 align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./images/header_title.svg">
-    <img src="./images/header_title_light.svg" alt="Hi there, Sreeja here!" width="520" />
-  </picture>
-</h1>
-
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./images/typing_anim.svg">
-    <img src="./images/typing_anim_light.svg" alt="Full-Stack Developer | UI/UX Enthusiast | Creative Coder" width="500" />
+    <source media="(prefers-color-scheme: dark)" srcset="./images/hero.svg">
+    <img src="./images/hero_light.svg" width="840" alt="Hi there, Sreeja here! Full-Stack Developer, UI/UX Enthusiast, Creative Coder. Building The Diecast Store, learning welding software, and happy to talk about coding journeys and what inspires you to create." />
   </picture>
 </p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sparrowdex&color=FF4581&style=plastic&label=Profile%20Views" alt="Profile Views" />
-</p>
-
-<p align="center">
-  <em>A 4th-year B.Tech student passionate about crafting beautiful, user-centered interfaces and building robust full-stack applications. I love experimenting with new tools, creative coding, and solving real-world problems.</em>
-</p>
-
-<br/>
 
 <p align="center">
   <a href="https://sparrowdex.pythonanywhere.com/link">
@@ -30,7 +13,12 @@
 
 <br/>
 
-## <img src="https://api.iconify.design/solar/code-square-bold-duotone.svg?color=%231E88E5" width="28" valign="middle"> My Tech Stack
+<h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./images/titles/stack.svg">
+    <img src="./images/titles/stack_light.svg" height="60" alt="My tech stack" />
+  </picture>
+</h3>
 
 <div align="center">
   <a href="https://nextjs.org" target="_blank" rel="noreferrer">
@@ -102,7 +90,12 @@
 
 <br/>
 
-## <img src="https://api.iconify.design/solar/rocket-bold-duotone.svg?color=%23D84315" width="28" valign="middle"> Featured Projects
+<h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./images/titles/projects.svg">
+    <img src="./images/titles/projects_light.svg" height="60" alt="Featured projects" />
+  </picture>
+</h3>
 
 <table align="center">
   <tr>
@@ -125,13 +118,27 @@
 
 <br/>
 
-## <img src="https://api.iconify.design/solar/chart-square-bold-duotone.svg?color=%2343A047" width="28" valign="middle"> Contribution Activity
+<h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./images/titles/streaks.svg">
+    <img src="./images/titles/streaks_light.svg" height="60" alt="Contribution activity" />
+  </picture>
+</h3>
 
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_contribs.svg" alt="Total contributions" width="190" />
-  <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_streak.svg" alt="Current streak (days)" width="190" />
-  <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_record.svg" alt="Longest streak (days)" width="190" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_contribs.svg">
+    <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_contribs_light.svg" alt="Total contributions" width="230" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_streak.svg">
+    <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_streak_light.svg" alt="Current streak (days)" width="230" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_record.svg">
+    <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_record_light.svg" alt="Longest streak (days)" width="230" />
+  </picture>
 
   <br/><br/>
 
@@ -145,7 +152,12 @@
 
 <br/>
 
-## <img src="https://api.iconify.design/solar/letter-bold-duotone.svg?color=%23FF4500" width="28" valign="middle"> Reach Out!
+<h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./images/titles/contact.svg">
+    <img src="./images/titles/contact_light.svg" height="60" alt="Reach out" />
+  </picture>
+</h3>
 
 <div align="left">
   <img src="./images/hello.gif" align="left" width="240" alt="Hello, wanna code?" />

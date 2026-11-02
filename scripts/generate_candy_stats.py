@@ -1,16 +1,14 @@
 """Fill the candy-wrapper stat SVGs with live GitHub numbers.
 
-Uses only the standard library so it runs on a bare Actions runner.
+Fetching uses only the standard library; drawing needs `pip install fonttools`.
 
   GITHUB_TOKEN=... python scripts/generate_candy_stats.py <username> <out_dir>
 
-Templates are images/candy_wrapper_{contribs,streak,record}.svg -- the big
-number in each is swapped for the real value and written to <out_dir>.
+Writes candy_{contribs,streak,record}.svg (dark) and *_light.svg to <out_dir>.
 """
 import datetime as dt
 import json
 import os
-import re
 import sys
 import urllib.request
 
@@ -78,19 +76,21 @@ def compute_stats(days, today):
     return {"contribs": total, "streak": current, "record": longest}
 
 
-NUMBER_RE = re.compile(r'(font-size="32"[^>]*>)[^<]*(</text>)')
+CANDIES = {  # stat key -> (label, flavour, wobble delay)
+    "contribs": ("contributions", "blue", 0.0),
+    "streak": ("day streak", "pink", 0.7),
+    "record": ("best streak", "purple", 1.4),
+}
 
 
-def render(stats, out_dir, template_dir="images"):
+def render(stats, out_dir):
+    from candy_svg import candy_svg  # needs fonttools; fetching above doesn't
+
     os.makedirs(out_dir, exist_ok=True)
-    for key, value in stats.items():
-        with open(os.path.join(template_dir, f"candy_wrapper_{key}.svg"), encoding="utf-8") as f:
-            svg = f.read()
-        svg, n = NUMBER_RE.subn(rf"\g<1>{value:,}\g<2>", svg, count=1)
-        if n != 1:
-            sys.exit(f"Could not find the number slot in candy_wrapper_{key}.svg")
-        with open(os.path.join(out_dir, f"candy_{key}.svg"), "w", encoding="utf-8") as f:
-            f.write(svg)
+    for key, (label, flavour, delay) in CANDIES.items():
+        for theme, suffix in (("dark", ""), ("light", "_light")):
+            with open(os.path.join(out_dir, f"candy_{key}{suffix}.svg"), "w", encoding="utf-8") as f:
+                f.write(candy_svg(stats[key], label, flavour, theme, delay))
 
 
 if __name__ == "__main__":
