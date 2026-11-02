@@ -1,10 +1,10 @@
-"""Fill the candy-wrapper stat SVGs with live GitHub numbers.
+"""Draw the retro arcade stats HUD with live GitHub numbers.
 
 Fetching uses only the standard library; drawing needs `pip install fonttools`.
 
-  GITHUB_TOKEN=... python scripts/generate_candy_stats.py <username> <out_dir>
+  GITHUB_TOKEN=... python scripts/generate_stats.py <username> <out_dir>
 
-Writes candy_{contribs,streak,record}.svg (dark) and *_light.svg to <out_dir>.
+Writes stats_hud.svg to <out_dir>.
 """
 import datetime as dt
 import json
@@ -76,21 +76,12 @@ def compute_stats(days, today):
     return {"contribs": total, "streak": current, "record": longest}
 
 
-CANDIES = {  # stat key -> (label, flavour, wobble delay)
-    "contribs": ("contributions", "blue", 0.0),
-    "streak": ("day streak", "pink", 0.7),
-    "record": ("best streak", "purple", 1.4),
-}
-
-
 def render(stats, out_dir):
-    from candy_svg import candy_svg  # needs fonttools; fetching above doesn't
+    from retro_svg import hud_svg  # needs fonttools; fetching above doesn't
 
     os.makedirs(out_dir, exist_ok=True)
-    for key, (label, flavour, delay) in CANDIES.items():
-        for theme, suffix in (("dark", ""), ("light", "_light")):
-            with open(os.path.join(out_dir, f"candy_{key}{suffix}.svg"), "w", encoding="utf-8") as f:
-                f.write(candy_svg(stats[key], label, flavour, theme, delay))
+    with open(os.path.join(out_dir, "stats_hud.svg"), "w", encoding="utf-8") as f:
+        f.write(hud_svg(stats))
 
 
 if __name__ == "__main__":

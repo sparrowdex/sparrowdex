@@ -127,18 +127,7 @@
 
 <div align="center">
 
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_contribs.svg">
-    <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_contribs_light.svg" alt="Total contributions" width="230" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_streak.svg">
-    <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_streak_light.svg" alt="Current streak (days)" width="230" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_record.svg">
-    <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/candy_record_light.svg" alt="Longest streak (days)" width="230" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/sparrowdex/sparrowdex/output/stats_hud.svg" width="760" alt="Arcade stats: current streak, best streak, total contributions and level" />
 
   <br/><br/>
 
@@ -159,17 +148,12 @@
   </picture>
 </h3>
 
-<div align="left">
-  <img src="./images/hello.gif" align="left" width="240" alt="Hello, wanna code?" />
-  <br/>
-  <p><strong>I am always open to discussing new projects, creative ideas, or exciting opportunities!</strong></p>
-  <p>Whether you have a question, want to collaborate on some code, or just want to say hi, my inbox is always open.</p>
-  <br/>
-  <a href="https://linkedin.com/in/sreeja-das"><img src="https://img.shields.io/badge/LinkedIn-FF69B4?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:sreejadas0405@gmail.com"><img src="https://img.shields.io/badge/Email-FF1493?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
-  <a href="https://instagram.com/_e.s.a.r_"><img src="https://img.shields.io/badge/Instagram-FF1495?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"></a>
-  <p align="right">
-  <img src="./images/snoopy-modified.png" alt="Snoopy" width="90" />
+<p align="center">
+  <img src="./images/retro/dialogue.svg" width="760" alt="A wild VISITOR appeared! I'm always up for new projects, creative ideas or just a hi. What will you do?" />
 </p>
-</div>
-<br clear="both"/>
+
+<p align="center">
+  <a href="https://linkedin.com/in/sreeja-das"><img src="./images/retro/btn_linkedin.svg" width="240" alt="LinkedIn" /></a>
+  <a href="mailto:sreejadas0405@gmail.com"><img src="./images/retro/btn_email.svg" width="240" alt="Email" /></a>
+  <a href="https://instagram.com/_e.s.a.r_"><img src="./images/retro/btn_instagram.svg" width="240" alt="Instagram" /></a>
+</p>

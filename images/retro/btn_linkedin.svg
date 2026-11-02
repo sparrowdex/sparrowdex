@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="264" height="64" viewBox="0 0 264 64" fill="none" shape-rendering="crispEdges">
+  <title>LINKEDIN</title>
+  <style>
+    .blink { animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; } }
+  </style>
+  <rect x="4" y="0" width="256" height="64" fill="#F4EBD9"/><rect x="0" y="4" width="264" height="56" fill="#F4EBD9"/>
+  <rect x="8" y="4" width="248" height="56" fill="#17122B"/><rect x="4" y="8" width="256" height="48" fill="#17122B"/>
+  <rect x="11" y="11" width="242" height="42" stroke="#3D3266" stroke-width="2" fill="none"/>
+  
+  <g class="blink"><path fill="#FF6FA5" d="M20 18h4v4h-4zM20 22h8v4h-8zM20 26h12v4h-12zM20 30h16v4h-16zM20 34h12v4h-12zM20 38h8v4h-8zM20 42h4v4h-4z"/></g>
+  <path fill="#3B9BE8" d="M44 14h36v4h-36zM44 18h4v4h-4zM56 18h24v4h-24zM44 22h4v4h-4zM56 22h24v4h-24zM44 26h36v4h-36zM44 30h4v4h-4zM56 30h4v4h-4zM72 30h8v4h-8zM44 34h4v4h-4zM56 34h4v4h-4zM76 34h4v4h-4zM44 38h4v4h-4zM56 38h4v4h-4zM68 38h4v4h-4zM76 38h4v4h-4zM44 42h4v4h-4zM56 42h4v4h-4zM68 42h4v4h-4zM76 42h4v4h-4zM44 46h36v4h-36z"/><path fill="#F4EBD9" d="M48 18h8v4h-8zM48 22h8v4h-8zM48 30h8v4h-8zM60 30h12v4h-12zM48 34h8v4h-8zM60 34h16v4h-16zM48 38h8v4h-8zM60 38h8v4h-8zM72 38h4v4h-4zM48 42h8v4h-8zM60 42h8v4h-8zM72 42h4v4h-4z"/>
+  <path transform="translate(94 40)" fill="#F4EBD9" d="M2 -2V-16H6V-4H14V-2Z M18 -2V-4H22V-14H18V-16H30V-14H26V-4H30V-2Z M32 -2V-16H36V-14H38V-12H40V-10H42V-16H46V-2H42V-6H40V-8H38V-10H36V-2Z M48 -2V-16H52V-10H54V-12H56V-14H58V-16H62V-14H60V-12H58V-10H56V-8H58V-6H60V-4H62V-2H56V-4H54V-6H52V-2Z M64 -2V-16H78V-14H68V-10H76V-8H68V-4H78V-2Z M80 -2V-16H90V-14H92V-12H94V-6H92V-4H90V-2ZM84 -4H88V-6H90V-12H88V-14H84Z M98 -2V-4H102V-14H98V-16H110V-14H106V-4H110V-2Z M112 -2V-16H116V-14H118V-12H120V-10H122V-16H126V-2H122V-6H120V-8H118V-10H116V-2Z"/>
+</svg>

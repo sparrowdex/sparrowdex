@@ -1,4 +1,4 @@
-"""Generate the scrapbook hero: avatar polaroid + name + typing line + handwritten notes.
+"""Generate the scrapbook hero: pixel-sparrow polaroid + name + typing line + handwritten notes.
 
 Run from the repo root:  python scripts/create_hero.py
 Outputs: images/hero.svg (dark mode) and images/hero_light.svg (light mode)
@@ -11,6 +11,7 @@ import io
 from PIL import Image
 
 from svgtext import glyph_paths, load_font
+from sparrow_svg import sparrow_fragment
 from typing_svg import typing_fragment
 
 NAME = "Hi there, Sreeja here!"
@@ -66,12 +67,11 @@ def wrap(text, size, max_w):
     return lines + [cur]
 
 
-# ---------- left: avatar polaroid ----------
-PX, PY, PW = 48, 40, 206          # photo frame
+# ---------- left: pixel sparrow polaroid ----------
+PX, PY, PW = 44, 34, 216          # photo frame (192px photo = 32 pixels x 6px)
 PAD = 12
 PH_ = PW - 2 * PAD                # square photo
 FH = PAD + PH_ + 50
-avatar = png_b64("images/pixel_avatar.png", PH_ * 2, "JPEG", crop=(12, 12, 1012, 1012))
 bow = png_b64("images/bow-modified.png", 120)
 pcx = PX + PW / 2
 pivot = f"{pcx} {PY - 6}"
@@ -81,7 +81,7 @@ polaroid = f'''  <g transform="rotate(-4 {pivot})">
     <animateTransform attributeName="transform" type="rotate" dur="7s" repeatCount="indefinite"
       values="-4 {pivot}; -1.8 {pivot}; -4 {pivot}" keyTimes="0;.5;1" calcMode="spline" keySplines=".45 0 .55 1; .45 0 .55 1"/>
     <rect x="{PX}" y="{PY}" width="{PW}" height="{FH}" rx="4" fill="url(#paper)" filter="url(#shadow)"/>
-    <image href="data:image/jpeg;base64,{avatar}" x="{PX + PAD}" y="{PY + PAD}" width="{PH_}" height="{PH_}" style="image-rendering:pixelated"/>
+    {sparrow_fragment(PX + PAD, PY + PAD, PH_ // 32)}
     <rect x="{PX + PAD}" y="{PY + PAD}" width="{PH_}" height="{PH_}" fill="url(#gloss)"/>
     <path transform="translate({pcx - cap_w / 2:.1f}, {PY + PAD + PH_ + 33})" fill="#5A4650" d="{cap_d}"/>
     <g transform="rotate(4 {pcx} {PY})">
